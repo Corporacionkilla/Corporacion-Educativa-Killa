@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORPORACION EDUCATIVA KILLA - Liderando la Educación</title>
+    <!-- Carga de Tailwind CSS para estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter y colores base -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Fondo muy claro */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Colores temáticos: Azul profundo para educación, amarillo/dorado para Killa (Luna)
+                    colors: {
+                        'killa-blue': '#1e3a8a', // Deep Blue
+                        'killa-gold': '#f59e0b', // Amber/Gold for accents
+                        'killa-light': '#3b82f6', // Light Blue
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Encabezado y Navegación -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Nombre de la Corporación -->
+                <a href="#" class="text-2xl font-extrabold text-killa-blue tracking-tight">
+                    CORPORACION EDUCATIVA <span class="text-killa-gold">KILLA</span>
+                </a>
+                <!-- Menú de Navegación (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-killa-blue hover:text-killa-gold font-semibold transition duration-300">Inicio</a>
+                    <a href="#programas" class="text-killa-blue hover:text-killa-gold font-semibold transition duration-300">Programas</a>
+                    <a href="#nosotros" class="text-killa-blue hover:text-killa-gold font-semibold transition duration-300">Nosotros</a>
+                    <a href="#contacto" class="text-killa-blue hover:text-killa-gold font-semibold transition duration-300">Contacto</a>
+                </nav>
+                <!-- Botón de Menú Móvil (Icono SVG) -->
+                <button id="mobile-menu-button" class="md:hidden p-2 text-killa-blue hover:text-killa-gold focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-killa-blue hover:bg-killa-blue hover:text-white transition duration-300">Inicio</a>
+                <a href="#programas" class="block px-3 py-2 rounded-md text-base font-medium text-killa-blue hover:bg-killa-blue hover:text-white transition duration-300">Programas</a>
+                <a href="#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-killa-blue hover:bg-killa-blue hover:text-white transition duration-300">Nosotros</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-killa-blue hover:bg-killa-blue hover:text-white transition duration-300">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Hero / Inicio -->
+        <section id="inicio" class="relative bg-killa-blue text-white py-24 sm:py-32 overflow-hidden">
+            <!-- Capa de fondo con patrón o imagen placeholder -->
+            <div class="absolute inset-0 opacity-10 bg-center bg-cover" style="background-image: url('https://placehold.co/1920x1080/1e3a8a/ffffff?text=Fondo+Educativo');" onerror="this.style.backgroundImage='none'; this.style.backgroundColor='#1e3a8a';"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="inline-block text-killa-gold font-semibold text-lg mb-4 rounded-full px-4 py-1 border-2 border-killa-gold">Educación de Vanguardia</span>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                    Liderando el futuro de la educación
+                </h1>
+                <p class="text-xl sm:text-2xl font-light mb-10 max-w-3xl mx-auto">
+                    Transformando vidas a través de la excelencia académica, la innovación y el desarrollo integral.
+                </p>
+                <a href="#programas" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl shadow-2xl text-killa-blue bg-killa-gold hover:bg-yellow-400 transform hover:scale-105 transition duration-300 ease-in-out">
+                    Explora Nuestros Programas
+                    <svg class="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Programas / Pilares -->
+        <section id="programas" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-killa-blue sm:text-5xl">Nuestros Pilares Educativos</h2>
+                    <p class="mt-4 text-xl text-gray-600">Fomentamos el crecimiento completo del estudiante en áreas clave.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Tarjeta 1: Innovación -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-killa-gold">
+                        <div class="flex justify-center mb-6">
+                            <!-- Icono de Foco/Innovación -->
+                            <svg class="w-12 h-12 text-killa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7.5 7.5l-1.4 1.4m12.9-.3l1.4-1.4M7.5 16.5L6.1 17.9m12.9.3l1.4-1.4M12 11V7m0 8v-4m-4 0h8a4 4 0 10-8 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-killa-blue mb-4">Innovación Tecnológica</h3>
+                        <p class="text-gray-600 text-center">Integración de herramientas de vanguardia, robótica y pensamiento computacional en cada nivel educativo.</p>
+                    </div>
+
+                    <!-- Tarjeta 2: Desarrollo Integral -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-killa-light">
+                        <div class="flex justify-center mb-6">
+                            <!-- Icono de Personas/Comunidad -->
+                            <svg class="w-12 h-12 text-killa-light" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2c0-.214-.031-.42-.084-.62M5 20h5v-2a3 3 0 00-5.356-1.857M5 20v-2c0-.214.031-.42.084-.62m12.916-3.983V17m0 0v-5m0 5h-10m0 0v-5m0 5H7m2 5c-1.343 0-2.607-.282-3.714-.798M16 16c1.343 0 2.607-.282 3.714-.798M12 12c-3.313 0-6 2.687-6 6h12c0-3.313-2.687-6-6-6z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-killa-blue mb-4">Desarrollo Integral</h3>
+                        <p class="text-gray-600 text-center">Foco en habilidades blandas, inteligencia emocional, liderazgo y valores para ciudadanos responsables.</p>
+                    </div>
+
+                    <!-- Tarjeta 3: Excelencia -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-killa-blue">
+                        <div class="flex justify-center mb-6">
+                            <!-- Icono de Diploma/Excelencia -->
+                            <svg class="w-12 h-12 text-killa-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.382a12.001 12.001 0 014.12 1.94 12.001 12.001 0 011.94 4.12M12 2v20m0-20a10 10 0 00-10 10 10 10 0 0010 10 10 10 0 0010-10 10 10 0 00-10-10z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-killa-blue mb-4">Excelencia Académica</h3>
+                        <p class="text-gray-600 text-center">Currículo riguroso y personalizado, impulsado por profesores altamente calificados y metodologías comprobadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nosotros / Misión -->
+        <section id="nosotros" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Contenido de Texto -->
+                    <div>
+                        <span class="text-lg font-semibold text-killa-gold mb-3 block">Nuestra Historia y Misión</span>
+                        <h2 class="text-4xl font-extrabold text-killa-blue mb-6">Educando con el brillo de Killa</h2>
+                        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                            En Corporación Educativa KILLA, creemos que la educación es la luz que guía el futuro. Nuestra misión es ofrecer una formación integral de calidad que empodere a cada estudiante para que descubra su potencial, enfrente los desafíos del mañana y contribuya positivamente a la sociedad.
+                        </p>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-6 h-6 text-killa-gold mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>**Visión Global:** Formamos líderes con mentalidad abierta e internacional.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-6 h-6 text-killa-gold mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>**Valores Humanos:** Énfasis en la ética, el respeto y la colaboración.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-6 h-6 text-killa-gold mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>**Comunidad Activa:** Padres, estudiantes y profesores trabajando juntos.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Imagen Placeholder -->
+                    <div class="rounded-xl shadow-2xl overflow-hidden">
+                         
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Equipo+KILLA" alt="Imagen de un aula moderna de KILLA" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="py-20 sm:py-28 bg-killa-blue">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="text-4xl font-extrabold mb-4 text-killa-gold">Contáctanos Hoy</h2>
+                <p class="text-xl font-light mb-12">Estamos listos para empezar tu camino educativo. Envíanos un mensaje o llámanos.</p>
+
+                <div class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl max-w-lg mx-auto">
+                    <!-- Formulario simple (sin acción real, solo de ejemplo) -->
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre Completo" required
+                                class="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-killa-gold focus:border-killa-gold text-gray-800 transition duration-150">
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" required
+                                class="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-killa-gold focus:border-killa-gold text-gray-800 transition duration-150">
+                        </div>
+                        <div>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu Mensaje o Pregunta" required
+                                class="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-killa-gold focus:border-killa-gold text-gray-800 transition duration-150"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full flex justify-center items-center py-3 px-6 border border-transparent rounded-xl shadow-lg text-base font-bold text-killa-blue bg-killa-gold hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-killa-gold transition duration-300">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-8 text-gray-600">
+                        <p class="font-semibold">O contáctanos directamente:</p>
+                        <p>Teléfono: +51 987 654 321</p>
+                        <p>Email: info@killaeducativa.pe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <a href="#inicio" class="px-5 py-2 text-base text-gray-300 hover:text-killa-gold">Inicio</a>
+                <a href="#programas" class="px-5 py-2 text-base text-gray-300 hover:text-killa-gold">Programas</a>
+                <a href="#nosotros" class="px-5 py-2 text-base text-gray-300 hover:text-killa-gold">Nosotros</a>
+                <a href="#contacto" class="px-5 py-2 text-base text-gray-300 hover:text-killa-gold">Contacto</a>
+            </nav>
+            <div class="mt-8 flex justify-center space-x-6">
+                <!-- Iconos de Redes Sociales (Placeholders) -->
+                <a href="#" class="text-gray-400 hover:text-killa-gold">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.77-1.63 1.563V12h3.29l-.53 3.39h-2.76v6.987A10.04 10.04 0 0022 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-killa-gold">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 5.212 3.843 9.44 8.878 9.813V15.75h-2.11v-3.75h2.11V10.1c0-2.083 1.258-3.23 3.14-3.23 0.897 0 1.666.16 1.895.193v2.18h-1.264c-1.244 0-1.488.588-1.488 1.45V12h2.72l-.438 3.75h-2.282v5.063C17.657 21.44 22 17.212 22 12 22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">&copy; 2024 CORPORACION EDUCATIVA KILLA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para la funcionalidad del menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const links = menu.querySelectorAll('a');
+
+            // Toggle menu visibility
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
